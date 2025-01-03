@@ -467,13 +467,7 @@ def main():
             
             if account:
                 with open("accounts.txt", "a") as f:
-                    f.write(f"Email: {account['email']}\n")
-                    f.write(f"Password: {account['password']}\n")
-                    f.write(f"Token: {account['access_token']}\n")
-                    f.write(f"Wallet Private Key: {account['wallet_private_key']}\n")
-                    f.write(f"Wallet Address: {account['wallet_address']}\n")
-                    f.write(f"Points: 51000\n")
-                    f.write("-" * 85 + "\n")
+                    f.write(f"{account['email']}, {account['password']} \n")    
                     f.flush()
                 successful += 1
                 log_message(i+1, count, "Account created successfully!", "debug")
